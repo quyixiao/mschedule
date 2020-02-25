@@ -1,0 +1,55 @@
+注册消息
+{
+  "type":"register",
+  "payload":{
+    "id":"uuid",
+    "hostname":"xxx",
+    "ip":[]
+  }
+}
+
+
+心跳消息
+{
+  "type":"heartbeat",
+  "payload":{
+    "id":"uuid",
+    "hostname":"xxx",
+    "ip":[]
+  }
+}
+
+
+任务消息
+{
+  "type":"task",
+  "payload":{
+    "id":"task-uuid",
+    "script":"base64encode",
+    "timeout":0,
+    "parallel":1,
+    "fail_rate":0,
+    "fail_count":-1
+  }
+}
+parallel：并行，表示同时执行的任务。
+fail_rate：失败率，0表示不允许失败。
+fail_count：失败数，-1不关心失败的数量和失败率。
+
+
+
+执行结果消息
+{
+  "type":"result",
+  "payload":{
+    "id":"task-uuid",
+    "agent_id":"agent-uuid",
+    "code":0,
+    "output":"base64encode"
+  }
+}
+
+id，任务id。
+agent_id：Agent是谁。
+code：返回的状态码，0正常，非零错误，和linux的命令返回值一样。
+output：输出的结果。字符串，Base64编码后返回。
