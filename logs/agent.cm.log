@@ -1,0 +1,2 @@
+2020-02-25 11:28:51,326 【INFO】 [cm.py:24] ack {'type': 'register', 'payload': {'id': '8ea11189870b436f86bcc401a0d37f83', 'hostname': 'quyixiaodeMacBook-Pro.local', 'ip': ['172.16.11.24', '172.222.220.38']}}
+2020-02-25 11:28:56,334 【INFO】 [cm.py:28] ack {'type': 'heartbeat', 'payload': {'id': '8ea11189870b436f86bcc401a0d37f83', 'hostname': 'quyixiaodeMacBook-Pro.local', 'ip': ['172.16.11.24', '172.222.220.38']}}

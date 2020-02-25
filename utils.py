@@ -1,7 +1,6 @@
 import logging
 
-
-def getlogger(mod_name: str, filepath: str):
+def getlogger(mod_name:str, filepath:str):
     logger = logging.getLogger(mod_name)
     logger.setLevel(logging.INFO)  # 单独设置
     logger.propagate = False  # 阻止传送给父logger
