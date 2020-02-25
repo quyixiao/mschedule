@@ -9,6 +9,7 @@ async def targetshandler(request:web.Request):
     return web.json_response(txt)
 
 async def addtaskhandler(request:web.Request):
+    print('-----------')
     data = await request.json()
     return web.json_response(client.add_task(data), status=201)
 

@@ -22,6 +22,7 @@ class ConnectionManager:
     sendmsg = handle
 
     def add_task(self, msg:dict):
+        print('add_task',msg)
         return self.store.add_task(msg)
 
 

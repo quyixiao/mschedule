@@ -33,6 +33,7 @@ class ConnectionManager:
                         self.state = RUNNING
                         # [task.id, task.script, task.timeout]
                         code ,output = self.exec.run(task[1], task[2]) # 阻塞
+                        print('客户端执行结果=',task[0], code, output)
                         self.client.sendmsg(self.message.result(task[0], code, output))
                         self.state = WAITING
 

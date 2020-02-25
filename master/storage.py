@@ -28,6 +28,7 @@ class Storage:
         msg['task_id'] = uuid.uuid4().hex
         task = Task(**msg)
         self.tasks[task.id] = task
+        print('taskId=',task)
         return task.id
 
     def iter_tasks(self, states={WAITING, RUNNING}):
